@@ -2,7 +2,6 @@
 
 This repository contains a reproducible pipeline for annotating genetic variants using **Ensembl VEP** with the **LOFTEE plugin**, restricting annotations to **MANE Select transcripts**, and extracting **high-confidence loss-of-function (LoF) variants**.
 
-The workflow is suitable for **ASD gene panels, WES, or WGS data**, and is designed to be clinically interpretable and publication-ready.
 
 ---
 
@@ -22,7 +21,6 @@ The workflow is suitable for **ASD gene panels, WES, or WGS data**, and is desig
 - VEP (offline cache installed)
 - LOFTEE plugin (GRCh38)
 - `bcftools`
-- Standard Unix tools (`grep`, `awk`, `egrep`, `sort`, `uniq`)
 - Reference genome: **GRCh38**
 
 ---
@@ -36,3 +34,17 @@ The workflow is suitable for **ASD gene panels, WES, or WGS data**, and is desig
 - Pick a **single best transcript per variant**
 - Classify loss-of-function variants using **LOFTEE**
 
+## Step 2: Extract High-Confidence (HC) LoF Variants
+
+- Count HC variants
+- Create HC-only VCF
+
+## Step 3: Extract Variant Details and Consequences
+
+- Convert annotated VCF into a tab-separated file containing:Chromosome, Position, Reference allele ,Alternate allele and VEP consequence
+
+## Step 4: Count Loss-of-Function Variants
+
+- LoF Consequences Considered: stop_gained, frameshift_variant, splice_donor_variant and splice_acceptor_variant
+
+## Step 4: Repeat Analysis for HC Variants Only
