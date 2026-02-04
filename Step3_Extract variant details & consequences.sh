@@ -1,3 +1,6 @@
+#Extract Variant Details and Consequences
+
+
 bcftools query -f '%CHROM\t%POS\t%REF\t%ALT\t%INFO/CSQ\n' mane_asd_loftee.vcf | \
 awk -F'\t' '{
   split($5, csq_entries, ",");
