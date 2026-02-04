@@ -1,3 +1,4 @@
+#Variant Annotation using VEP + LOFTEE
 perl vep \
   --input_file asd_work/new_analysis/analysis_30_may_25/asd_gene_panel.vcf.gz \
   --output_file asd_work/new_analysis/analysis_30_may_25/mane_asd_loftee.vcf \
