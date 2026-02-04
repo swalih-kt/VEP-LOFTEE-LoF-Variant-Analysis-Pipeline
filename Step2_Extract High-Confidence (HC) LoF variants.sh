@@ -1,3 +1,5 @@
+#Extract High-Confidence (HC) LoF Variants
+
 #Count HC variants
 grep -c "|HC|" mane_asd_loftee.vcf
 
